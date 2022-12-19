@@ -47,23 +47,22 @@
 
 <body>
 <div id="root">
-@include('dashboard.navbar.sidebar')
+@include('dashboard.layout.sidebar')
 
     <main>
         <div class="container">
 
             <!-- Content Start -->
-
                 @yield('container')
             <!-- Content End -->
         </div>
     </main>
     <!-- Layout Footer Start -->
     <footer>
-        @include('dashboard.navbar.footer')
+        @include('dashboard.layout.footer')
     </footer>
     <!-- Layout Footer End -->
 </div>
-@include('dashboard.navbar.addon')
+@include('dashboard.layout.addon')
 </body>
 </html>
