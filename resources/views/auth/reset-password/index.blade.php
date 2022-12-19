@@ -14,7 +14,7 @@
                     <div class="min-h-100 d-flex align-items-center">
                         <div class="w-100 w-lg-75 w-xxl-50">
                             <div>
-                               <h1>Tulisan Tulisan</h1>
+                                <h1>Tulisan Tulisan</h1>
                             </div>
                         </div>
                     </div>
@@ -31,29 +31,28 @@
                                 </a>
                             </div>
                             <div class="mb-5">
-                                <h2 class="cta-1 mb-0 text-primary">Welcome,</h2>
-                                <h2 class="cta-1 text-primary">let's get started!</h2>
+                                <h2 class="cta-1 mb-0 text-primary">Password trouble?</h2>
+                                <h2 class="cta-1 text-primary">Renew it here!</h2>
                             </div>
                             <div class="mb-5">
-                                <p class="h6">Please use your credentials to login.</p>
+                                <p class="h6">Please use below form to reset your password.</p>
                                 <p class="h6">
-                                    If you are not a member, please
-                                    <a href="/register">register</a>
+                                    If you are a member, please
+                                    <a href="/login">login</a>
                                     .
                                 </p>
                             </div>
                             <div>
-                                <form id="loginForm" class="tooltip-end-bottom" novalidate>
-                                    <div class="mb-3 filled form-group tooltip-end-top">
-                                        <i data-acorn-icon="email"></i>
-                                        <input class="form-control" placeholder="Email" name="email" />
-                                    </div>
-                                    <div class="mb-3 filled form-group tooltip-end-top">
+                                <form id="resetForm" class="tooltip-end-bottom" novalidate>
+                                    <div class="mb-3 filled">
                                         <i data-acorn-icon="lock-off"></i>
-                                        <input class="form-control pe-7" name="password" type="password" placeholder="Password" />
-                                        <a class="text-small position-absolute t-3 e-3" href="/forgot_password">Forgot?</a>
+                                        <input class="form-control" id="password" name="password" type="password" placeholder="Password" />
                                     </div>
-                                    <button type="submit" class="btn btn-lg btn-primary">Login</button>
+                                    <div class="mb-3 filled">
+                                        <i data-acorn-icon="lock-on"></i>
+                                        <input class="form-control" name="verifyPassword" type="password" placeholder="Verify Password" />
+                                    </div>
+                                    <button type="submit" class="btn btn-lg btn-primary">Reset Password</button>
                                 </form>
                             </div>
                         </div>
