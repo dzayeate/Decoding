@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-footer="true" data-override='{"attributes": {"placement": "vertical" }}'>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Dashboard | Decoding</title>
+    <title>Acorn Admin Template | Login Page</title>
+    <meta name="description" content="Login Page" />
     <!-- Favicon Tags Start -->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png" />
@@ -45,25 +46,8 @@
     <script src="js/base/loader.js"></script>
 </head>
 
-<body>
-<div id="root">
-@include('dashboard.navbar.sidebar')
-
-    <main>
-        <div class="container">
-
-            <!-- Content Start -->
-
-                @yield('container')
-            <!-- Content End -->
-        </div>
-    </main>
-    <!-- Layout Footer Start -->
-    <footer>
-        @include('dashboard.navbar.footer')
-    </footer>
-    <!-- Layout Footer End -->
-</div>
-@include('dashboard.navbar.addon')
+<body class="h-100">
+@yield('auth')
+@include('auth.layout.auth-addon')
 </body>
 </html>
