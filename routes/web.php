@@ -39,6 +39,12 @@ Route::get('/forgot_password', function () {
     ]);
 });
 
+Route::get('/reset_password', function () {
+    return view('auth.reset-password.index', [
+        "title" => "Reset Password Page ",
+    ]);
+});
+
 Route::get('/profile', function () {
     return view('dashboard.profile.index', [
         "title" => "Profile  ",
