@@ -22,13 +22,25 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/login', function () {
-    return view('auth.login.index');
+    return view('auth.login.index', [
+        "title" => "Login Page ",
+    ]);
 });
 
 Route::get('/register', function () {
-    return view('auth.register.index');
+    return view('auth.register.index', [
+        "title" => "Register Page ",
+    ]);
 });
 
 Route::get('/forgot_password', function () {
-    return view('auth.forgot-password.index');
+    return view('auth.forgot-password.index', [
+        "title" => "Forgot Password Page ",
+    ]);
+});
+
+Route::get('/profile', function () {
+    return view('dashboard.profile.index', [
+        "title" => "Profile  ",
+    ]);
 });

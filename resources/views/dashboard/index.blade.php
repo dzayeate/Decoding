@@ -1,4 +1,4 @@
-@extends('dashboard.navbar.main')
+@extends('dashboard.layout.main')
 
 @section('container')
     <!-- Title and Top Buttons Start -->
