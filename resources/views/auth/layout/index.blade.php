@@ -48,6 +48,6 @@
 
 <body class="h-100">
 @yield('auth')
-@include('auth.layout.auth-addon')
+@include('landingpage.layouts.addon')
 </body>
 </html>

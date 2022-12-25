@@ -137,17 +137,6 @@
                 </div>
                 <!-- Stats End -->
 
-                <!-- Activity Start -->
-                <h2 class="small-title">Activity</h2>
-                <div class="card mb-5">
-                    <div class="card-body">
-                        <div class="sh-35">
-                            <canvas id="bubbleChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <!-- Activity End -->
-
                 <!-- Timeline Start -->
                 <h2 class="small-title">Timeline</h2>
                 <div class="card mb-5">
