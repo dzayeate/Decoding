@@ -50,3 +50,10 @@ Route::get('/profile', function () {
         "title" => "Profile  ",
     ]);
 });
+
+Route::get('/login', [\App\Http\Controllers\LoginController::class, 'index']);
+Route::post('/login', [\App\Http\Controllers\LoginController::class, 'authenticate']);
+
+Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'index']);
+
+Route::post('/register', [\App\Http\Controllers\RegisterController::class, 'store']);

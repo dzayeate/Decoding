@@ -43,18 +43,30 @@
                                 </p>
                             </div>
                             <div>
-                                <form id="registerForm" class="tooltip-end-bottom" novalidate>
+                                <form action="/register" method="post" id="registerForm" class="tooltip-end-bottom" novalidate>
+                                 @csrf
                                     <div class="mb-3 filled form-group tooltip-end-top">
                                         <i data-acorn-icon="user"></i>
-                                        <input class="form-control" placeholder="Name" name="registerName" />
+                                        <input class="form-control @error('registerName') is-invalid @enderror" placeholder="Name" name="registerName"
+                                         required value="{{ old('registerName') }}" />
+                                        @error('registerName')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="mb-3 filled form-group tooltip-end-top">
                                         <i data-acorn-icon="email"></i>
-                                        <input class="form-control" placeholder="Email" name="registerEmail" />
+                                        <input class="form-control @error('registerEmail') is-invalid @enderror" placeholder="Email" name="registerEmail"
+                                         required value="{{ old('registerEmail') }}" />
+                                        @error('registerEmail')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="mb-3 filled form-group tooltip-end-top">
                                         <i data-acorn-icon="lock-off"></i>
-                                        <input class="form-control" name="registerPassword" type="password" placeholder="Password" />
+                                        <input class="form-control @error('registerPassword') is-invalid @enderror" name="registerPassword" type="password" placeholder="Password" required />
+                                        @error('registerPassword')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="mb-3 position-relative form-group">
                                         <div class="form-check">

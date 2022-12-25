@@ -34,6 +34,14 @@
                                 <h2 class="cta-1 mb-0 text-primary">Welcome,</h2>
                                 <h2 class="cta-1 text-primary">let's get started!</h2>
                             </div>
+
+                            @if(session()->has('success'))
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <strong>{{ session()->get('success') }}</strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            @endif
+
                             <div class="mb-5">
                                 <p class="h6">Please use your credentials to login.</p>
                                 <p class="h6">
@@ -43,14 +51,15 @@
                                 </p>
                             </div>
                             <div>
-                                <form id="loginForm" class="tooltip-end-bottom" novalidate>
+                                <form action="/login" method="post" id="loginForm" class="tooltip-end-bottom" novalidate>
+                                 @csrf
                                     <div class="mb-3 filled form-group tooltip-end-top">
                                         <i data-acorn-icon="email"></i>
-                                        <input class="form-control" placeholder="Email" name="email" />
+                                        <input class="form-control" placeholder="Email" name="registerEmail" id="email" autofocus required />
                                     </div>
                                     <div class="mb-3 filled form-group tooltip-end-top">
                                         <i data-acorn-icon="lock-off"></i>
-                                        <input class="form-control pe-7" name="password" type="password" placeholder="Password" />
+                                        <input class="form-control pe-7" name="RegisterPassword" type="password" placeholder="Password" id="password" required />
                                         <a class="text-small position-absolute t-3 e-3" href="/forgot_password">Forgot?</a>
                                     </div>
                                     <button type="submit" class="btn btn-lg btn-primary">Login</button>
