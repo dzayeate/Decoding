@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-footer="true" data-override='{"attributes": {"placement": "vertical" }}'>
+<html lang="en" data-footer="true">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Dashboard | Decoding</title>
+    <title>Decoding Indonesia - Bangun Karirmu Sebagai Developer</title>
+    <meta name="description" content="Home screen that contains stats, charts, call to action buttons and various listing elements." />
     <!-- Favicon Tags Start -->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png" />
@@ -36,6 +37,16 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="css/vendor/OverlayScrollbars.min.css" />
 
+    <link rel="stylesheet" href="css/vendor/glide.core.min.css" />
+
+    <link rel="stylesheet" href="css/vendor/introjs.min.css" />
+
+    <link rel="stylesheet" href="css/vendor/select2.min.css" />
+
+    <link rel="stylesheet" href="css/vendor/select2-bootstrap4.min.css" />
+
+    <link rel="stylesheet" href="css/vendor/plyr.css" />
+
     <!-- Vendor Styles End -->
     <!-- Template Base Styles Start -->
     <link rel="stylesheet" href="css/styles.css" />
@@ -47,19 +58,17 @@
 
 <body>
 <div id="root">
-@include('dashboard.layout.sidebar')
+@include('landingpage.layouts.navbar')
 
     <main>
         <div class="container">
-
-            <!-- Content Start -->
-                @yield('container')
-            <!-- Content End -->
+            @yield('landingpage-container')
         </div>
     </main>
+
     <!-- Layout Footer Start -->
     <footer>
-        @include('dashboard.layout.footer')
+        @include('landingpage.layouts.footer')
     </footer>
     <!-- Layout Footer End -->
 </div>

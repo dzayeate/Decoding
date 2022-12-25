@@ -197,118 +197,13 @@
                         </div>
                     </div>
 
-                    <div class="mb-5" id="placement">
-                        <label class="mb-3 d-inline-block form-label">Menu Placement</label>
-                        <div class="row d-flex g-3 justify-content-between flex-wrap">
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="horizontal" data-parent="placement">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary top"></div>
-                                    <div class="figure figure-secondary bottom"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">HORIZONTAL</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="vertical" data-parent="placement">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary left"></div>
-                                    <div class="figure figure-secondary right"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">VERTICAL</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="mb-5" id="behaviour">
-                        <label class="mb-3 d-inline-block form-label">Menu Behaviour</label>
-                        <div class="row d-flex g-3 justify-content-between flex-wrap">
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="pinned" data-parent="behaviour">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary left large"></div>
-                                    <div class="figure figure-secondary right small"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">PINNED</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="unpinned" data-parent="behaviour">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary left"></div>
-                                    <div class="figure figure-secondary right"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">UNPINNED</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="mb-5" id="layout">
-                        <label class="mb-3 d-inline-block form-label">Layout</label>
-                        <div class="row d-flex g-3 justify-content-between flex-wrap">
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="fluid" data-parent="layout">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary top"></div>
-                                    <div class="figure figure-secondary bottom"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">FLUID</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="boxed" data-parent="layout">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary top"></div>
-                                    <div class="figure figure-secondary bottom small"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">BOXED</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="mb-5" id="radius">
-                        <label class="mb-3 d-inline-block form-label">Radius</label>
-                        <div class="row d-flex g-3 justify-content-between flex-wrap">
-                            <a href="#" class="flex-grow-1 w-33 option col" data-value="rounded" data-parent="radius">
-                                <div class="card rounded-md radius-rounded p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary top"></div>
-                                    <div class="figure figure-secondary bottom"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">ROUNDED</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-33 option col" data-value="standard" data-parent="radius">
-                                <div class="card rounded-md radius-regular p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary top"></div>
-                                    <div class="figure figure-secondary bottom"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">STANDARD</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-33 option col" data-value="flat" data-parent="radius">
-                                <div class="card rounded-md radius-flat p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary top"></div>
-                                    <div class="figure figure-secondary bottom"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">FLAT</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Theme Settings Modal End -->
-
-<!-- Theme Settings & Niches Buttons Start -->
+<!-- Theme Settings Start -->
 <div class="settings-buttons-container">
     <button type="button" class="btn settings-button btn-primary p-0" data-bs-toggle="modal" data-bs-target="#settings" id="settingsButton">
         <span class="d-inline-block no-delay" data-bs-delay="0" data-bs-offset="0,3" data-bs-toggle="tooltip" data-bs-placement="left" title="Settings">
@@ -317,8 +212,32 @@
     </button>
 </div>
 <!-- Theme Settings & Niches Buttons End -->
-
+<!-- Search Modal Start -->
+<div class="modal fade modal-under-nav modal-search modal-close-out" id="searchPagesModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0 p-0">
+                <button type="button" class="btn-close btn btn-icon btn-icon-only btn-foreground" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ps-5 pe-5 pb-0 border-0">
+                <input id="searchPagesInput" class="form-control form-control-xl borderless ps-0 pe-0 mb-1 auto-complete" type="text" autocomplete="off" />
+            </div>
+            <div class="modal-footer border-top justify-content-start ps-5 pe-5 pb-3 pt-3 border-0">
+            <span class="text-alternate d-inline-block m-0 me-3">
+              <i data-acorn-icon="arrow-bottom" data-acorn-size="15" class="text-alternate align-middle me-1"></i>
+              <span class="align-middle text-medium">Navigate</span>
+            </span>
+                <span class="text-alternate d-inline-block m-0 me-3">
+              <i data-acorn-icon="arrow-bottom-left" data-acorn-size="15" class="text-alternate align-middle me-1"></i>
+              <span class="align-middle text-medium">Select</span>
+            </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Search Modal End -->
 <!-- Vendor Scripts Start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 <script src="js/vendor/jquery-3.5.1.min.js"></script>
 <script src="js/vendor/bootstrap.bundle.min.js"></script>
 <script src="js/vendor/OverlayScrollbars.min.js"></script>
@@ -327,10 +246,9 @@
 
 <script src="icon/acorn-icons.js"></script>
 <script src="icon/acorn-icons-interface.js"></script>
-
-<script src="js/vendor/jquery.validate/jquery.validate.min.js"></script>
-
-<script src="js/vendor/jquery.validate/additional-methods.min.js"></script>
+<script src="icon/acorn-icons-commerce.js"></script>
+<script src="icon/acorn-icons-learning.js"></script>
+<script src="icon/acorn-icons-medical.js"></script>
 
 <!-- Vendor Scripts End -->
 
@@ -342,8 +260,6 @@
 <script src="js/base/settings.js"></script>
 <!-- Template Base Scripts End -->
 <!-- Page Specific Scripts Start -->
-
-<script src="js/pages/auth.login.js"></script>
 
 <script src="js/common.js"></script>
 <script src="js/scripts.js"></script>
