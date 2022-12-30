@@ -35,31 +35,77 @@ Route::get('/dashboard', function () {
 
 Route::get('/login', function () {
     return view('auth.login.index', [
-        "title" => "Login Page ",
+        "title" => "Login Page",
     ]);
 });
 
 Route::get('/register', function () {
     return view('auth.register.index', [
-        "title" => "Register Page ",
+        "title" => "Register Page",
     ]);
 });
 
 Route::get('/forgot_password', function () {
     return view('auth.forgot-password.index', [
-        "title" => "Forgot Password Page ",
+        "title" => "Forgot Password Page",
     ]);
 });
 
 Route::get('/reset_password', function () {
     return view('auth.reset-password.index', [
-        "title" => "Reset Password Page ",
+        "title" => "Reset Password Page",
     ]);
 });
 
 Route::get('/profile', function () {
     return view('dashboard.profile.index', [
-        "title" => "Profile  ",
+        "title" => "Profile",
+    ]);
+});
+
+Route::get('/course', function () {
+    return view('dashboard.course.index', [
+        "title" => "Course",
+    ]);
+});
+
+Route::get('/quiz', function () {
+    return view('dashboard.quiz.index', [
+        "title" => "Quiz",
+    ]);
+});
+
+Route::get('/settings', function () {
+    return view('dashboard.settings.index', [
+        "title" => "Settings",
+    ]);
+});
+
+Route::get('/admin', function () {
+    return view('admin.index');
+});
+
+Route::get('/courses', function () {
+    return view('admin.courses.index', [
+        "title" => "Courses",
+    ]);
+});
+
+Route::get('/quis', function () {
+    return view('admin.quis.index', [
+        "title" => "Quis",
+    ]);
+});
+
+Route::get('/crud', function () {
+    return view('admin.crud.index', [
+        "title" => "CRUD",
+    ]);
+});
+
+Route::get('/upload', function () {
+    return view('admin.upload.index', [
+        "title" => "Upload",
     ]);
 });
 
