@@ -12,6 +12,39 @@
         </div>
         <!-- Logo End -->
 
+        <!-- User Menu Start -->
+        <div class="user-container d-flex">
+            <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="name">Login / Register</div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end user-menu wide">
+                <div class="row mb-1 ms-0 me-0">
+                    <div class="col-6 ps-1 pe-1">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/login">
+                                    <i class="me-2 bi bi-box-arrow-in-right" ></i>
+                                    <span class="align-middle">Login</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 pe-1 ps-1">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/register">
+                                    <i class=" bi bi-person-add me-2" ></i>
+                                    <span class="align-middle">Register</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Menu End -->
+
         <!-- Language Switch Start -->
         <div class="language-switch-container">
             <button class="btn btn-empty language-button dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN</button>
@@ -23,22 +56,17 @@
         </div>
         <!-- Language Switch End -->
 
-        <!-- User Menu Start -->
-        <div class="user-container d-flex ">
-            <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="name">Login</div>
-            </a>
-            <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="name">Register</div>
-            </a>
-        </div>
-        <!-- User Menu End -->
-
         <!-- Icons Menu Start -->
         <ul class="list-unstyled list-inline text-center menu-icons">
             <li class="list-inline-item">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#searchPagesModal">
                     <i data-acorn-icon="search" data-acorn-size="18"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#" id="pinButton" class="pin-button">
+                    <i data-acorn-icon="lock-on" class="unpin" data-acorn-size="18"></i>
+                    <i data-acorn-icon="lock-off" class="pin" data-acorn-size="18"></i>
                 </a>
             </li>
             <li class="list-inline-item">
@@ -54,7 +82,7 @@
         <div class="menu-container flex-grow-1">
             <ul id="menu" class="menu">
                 <li>
-                    <a href="" >
+                    <a href="/learningpaths" >
                         <i data-acorn-icon="screen" class="icon" data-acorn-size="18"></i>
                         <span class="label">Lerning Path</span>
                     </a>
@@ -78,18 +106,29 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="" data-href="Blocks.html">
-                        <i data-acorn-icon="grid-5" class="icon" data-acorn-size="18"></i>
-                        <span class="label">Lainya</span>
+                    <a href="" data-href="Pages.html">
+                        <i data-acorn-icon="notebook-1" class="icon" data-acorn-size="18"></i>
+                        <span class="label">Lainnya</span>
                     </a>
-                    <ul id="">
+                    <ul id="pages">
                         <li>
-                            <a href="">
+                            <a href="" data-href="Pages.Authentication.html">
+                                <span class="label">About Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" data-href="Pages.Authentication.html">
                                 <span class="label">Contact Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" data-href="Pages.Authentication.html">
+                                <span class="label">Testimonial</span>
                             </a>
                         </li>
                     </ul>
                 </li>
+
             </ul>
         </div>
         <!-- Menu End -->

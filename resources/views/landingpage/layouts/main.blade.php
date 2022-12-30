@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>Decoding Indonesia - Bangun Karirmu Sebagai Developer</title>
-    <meta name="description" content="Home screen that contains stats, charts, call to action buttons and various listing elements." />
+    <meta name="description" content="Bangun Karirmu Sebagai Developer" />
     <!-- Favicon Tags Start -->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png" />
@@ -49,6 +49,7 @@
 
     <!-- Vendor Styles End -->
     <!-- Template Base Styles Start -->
+{{--    <link rel="stylesheet" href="css/home.css">--}}
     <link rel="stylesheet" href="css/styles.css" />
     <!-- Template Base Styles End -->
 
@@ -61,9 +62,7 @@
 @include('landingpage.layouts.navbar')
 
     <main>
-        <div class="container">
-            @yield('landingpage-container')
-        </div>
+        @yield('landingpage-container')
     </main>
 
     <!-- Layout Footer Start -->

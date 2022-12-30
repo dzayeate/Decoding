@@ -11,7 +11,7 @@ Table of Contents
 |   \-- sizes
 |   \-- positions
 |   \-- shared
-|   
+|
 +-- themes
 |   |
 |   \-- rest
@@ -31,7 +31,7 @@ Table of Contents
 |   \-- light.teal
 |   \-- light.lime
 |   \-- light.sky
-|   
+|
 +-- bootstrap
 |   |
 |   \-- accordion
@@ -55,7 +55,7 @@ Table of Contents
 |   \-- tables
 |   \-- toast
 |   \-- tooltip
-|   
+|
 +-- plugins
 |   |
 |   \-- autocomplete
@@ -83,7 +83,7 @@ Table of Contents
 |   \-- tour
 |   \-- validation
 |   \-- wizard
-|   
+|
 +-- layout
     |
     \-- base
@@ -13914,6 +13914,15 @@ h6,
   height: var(--small-title-height);
 }
 
+.large-title {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    margin-bottom: 0;
+    font-size: 5em;
+    color: var(--primary);
+    height: var(--small-title-height);
+}
+
 .blockquote {
   font-size: 1em;
 }
@@ -15470,7 +15479,7 @@ html[data-navcolor=dark] .nav-container .menu-container .menu a.active, html[dat
 }
 
 .logo-default {
-  width: 100px;
+  width: 205px;
   min-height: 35px;
   object-position: left;
   object-fit: cover;
