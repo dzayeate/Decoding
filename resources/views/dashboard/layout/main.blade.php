@@ -63,6 +63,6 @@
     </footer>
     <!-- Layout Footer End -->
 </div>
-@include('landingpage.layouts.addon')
+@include('dashboard.layout.addon')
 </body>
 </html>

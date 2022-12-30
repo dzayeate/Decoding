@@ -238,6 +238,14 @@
 <!-- Search Modal End -->
 <!-- Vendor Scripts Start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+<!-- Bootstrap CSS -->
+{{--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"--}}
+{{--      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">--}}
+{{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"--}}
+{{--      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">--}}
+
+<script src="https://kit.fontawesome.com/2468ec86a4.js" crossorigin="anonymous"></script>
 <script src="js/vendor/jquery-3.5.1.min.js"></script>
 <script src="js/vendor/bootstrap.bundle.min.js"></script>
 <script src="js/vendor/OverlayScrollbars.min.js"></script>
