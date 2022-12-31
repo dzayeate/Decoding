@@ -258,6 +258,17 @@
 <script src="icon/acorn-icons-learning.js"></script>
 <script src="icon/acorn-icons-medical.js"></script>
 
+<script src="js/cs/scrollspy.js"></script>
+
+<script src="js/vendor/glide.min.js"></script>
+
+<script src="js/vendor/baguetteBox.min.js"></script>
+
+<script src="js/vendor/jquery.barrating.min.js"></script>
+
+<script src="js/vendor/Chart.bundle.min.js"></script>
+
+
 <!-- Vendor Scripts End -->
 
 <!-- Template Base Scripts Start -->
@@ -268,6 +279,12 @@
 <script src="js/base/settings.js"></script>
 <!-- Template Base Scripts End -->
 <!-- Page Specific Scripts Start -->
+<script src="js/cs/glide.custom.js"></script>
+<script src="js/plugins/carousels.js"></script>
+<script src="js/pages/course.explore.js"></script>
+<script src="js/cs/charts.extend.js"></script>
+<script src="js/pages/dashboard.elearning.js"></script>
+
 
 <script src="js/common.js"></script>
 <script src="js/scripts.js"></script>
