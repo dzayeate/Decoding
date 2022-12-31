@@ -4,7 +4,7 @@
         <div class="logo position-relative">
             <a href="/dashboards">
                 <!-- Logo can be added directly -->
-{{--                <img src="img/logo/logo-light-ds.svg" alt="logo" />--}}
+                <!-- <img src="img/logo/logo-white.svg" alt="logo" /> -->
 
                 <!-- Or added via css to provide different ones for different color themes -->
                 <div class="img"></div>
@@ -26,49 +26,8 @@
         <div class="user-container d-flex">
             <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img class="profile" alt="profile" src="img/profile/killua.jpg" />
-                <div class="name">Asril Permana</div>
+                <div class="name">Admin 1</div>
             </a>
-            <div class="dropdown-menu dropdown-menu-end user-menu wide">
-                <div class="row mb-3 ms-0 me-0">
-                    <div class="col-12 ps-1 mb-2">
-                        <div class="text-extra-small text-primary">ACCOUNT</div>
-                    </div>
-                    <div class="col-6 ps-1 pe-1">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="/profile">User Info</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="row mb-1 ms-0 me-0">
-                    <div class="col-12 p-1 mb-3 pt-3">
-                        <div class="separator-light"></div>
-                    </div>
-                    <div class="col-6 ps-1 pe-1">
-                        <ul class="list-unstyled">
-                            <li>
-                            <a href="/settings">
-                                    <i data-acorn-icon="gear" class="me-2" data-acorn-size="17"></i>
-                                    <span class="align-middle">Settings</span>
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
-                    <div class="col-6 pe-1 ps-1">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="/login">
-                                    <i data-acorn-icon="logout" class="me-2" data-acorn-size="17"></i>
-                                    <span class="align-middle">Logout</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
         <!-- User Menu End -->
 
@@ -104,12 +63,13 @@
                     </a>
                     <ul id="dashboards">
                         <li>
-                            <a href="/dashboard">
+                            <a href="/admin">
                                 <span class="label">Dashboards</span>
                             </a>
                         </li>
                     </ul>
                 </li>
+
                 <li>
                     <a href="#courses">
                         <i data-acorn-icon="online-class" class="icon" data-acorn-size="18"></i>
@@ -117,12 +77,13 @@
                     </a>
                     <ul id="courses">
                         <li>
-                            <a href="/course">
-                                <span class="label">My Courses</span>
+                            <a href="/courses">
+                                <span class="label">All Courses</span>
                             </a>
                         </li>
                     </ul>
                 </li>
+
                 <li>
                     <a href="#quiz">
                         <i data-acorn-icon="quiz" class="icon" data-acorn-size="18"></i>
@@ -130,12 +91,27 @@
                     </a>
                     <ul id="quiz">
                         <li>
-                            <a href="/quiz">
-                                <span class="label">List</span>
+                            <a href="/quis">
+                                <span class="label">All Quiz</span>
                             </a>
                         </li>
                     </ul>
                 </li>
+
+                <li>
+                    <a href="#more">
+                        <i data-acorn-icon="gear" class="icon" data-acorn-size="18"></i>
+                        <span class="label">More</span>
+                    </a>
+                    <ul id="more">
+                        <li>
+                            <a href="/login">
+                                <span class="label">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
         </div>
         <!-- Menu End -->

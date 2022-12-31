@@ -14,9 +14,10 @@
                     <div class="min-h-100 d-flex align-items-center">
                         <div class="w-100 w-lg-75 w-xxl-50">
                             <div>
-                                <h1>Tulisan Tulisan</h1>
+                                <h1>Selamat Datang!</h1>
+                                <h5>Decoding adalah sebuah perusahaan startup yang bertujuan mengembangkan ekosistem developer di Indonesia.
+                                    Decoding berdiri sejak November 2022, dan memiliki platform pembelajaran elektronik di laman Decoding.com.</h5>
                             </div>
-                            
                         </div>
                     </div>
                 </div>

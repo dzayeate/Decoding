@@ -6,11 +6,11 @@
         <div class="row">
             <!-- Title Start -->
             <div class="col-12 col-md-7">
-                <h1 class="mb-0 pb-0 display-4" id="title">Dashboards</h1>
+                <h1 class="mb-0 pb-0 display-4" id="title">Learning</h1>
                 <nav class="breadcrumb-container d-inline-block" aria-label="breadcrumb">
                     <ul class="breadcrumb pt-0">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="/dashboard">Dashboards</a></li>
+                        <li class="breadcrumb-item"><a href="index.html">Learning</a></li>
+                        <li class="breadcrumb-item"><a href="/dashboard">My Courses</a></li>
                     </ul>
                 </nav>
             </div>
@@ -21,15 +21,13 @@
 
     <!-- Content Start -->
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1>Welcome Back, Asril Permana!</h1>
+        <h1>Avalaible Courses</h1>
     </div>
 
     <!-- Cards Start -->
     <div class="row">
-      <h5>Latest Couse</h5>
-      <br><br>
  
- <div class="col-md-2 col-sm-12 mb-3">
+    <div class="col-md-2 col-sm-12 mb-3">
    <div class="card">
      <img src="img/thumbnail/html.jpg" class="card-img-top" alt="...">
      <div class="card-body">
@@ -95,23 +93,35 @@
  </div>
     <!-- Cards End -->
 
-  <!-- Quiz Start -->
-  <div class="row">
-      <h5>Latest Quiz</h5>
-      <br><br>
+    <!-- Cards Start -->
+    <div class="row">
  
- <div class="col-md-2 col-sm-12 mb-3">
+ <div class="col-md-2 col-sm-6 mb-3">
    <div class="card">
-     <img src="img/thumbnail/quiz1.jfif" class="card-img-top" alt="...">
+     <img src="img/thumbnail/php.png" class="card-img-top" alt="...">
      <div class="card-body">
-       <div class="card-title"><h4>Quiz HTML</h4></div>
-       Setelah mempelajari HTML silahkan mencoba quiz untuk mengetahui serta meningkatkan skill kalian.
+       <div class="card-title"><h4>Belajar PHP</h4></div>
+       PHP adalah bahasa scripting tujuan umum diarahkan pengembangan web.
      </div>
      <div class="card-footer">
-       <a href="https://www.youtube.com/@sandhikagalihWPU" class="card-link">Mulai</a>
+       <a href="https://www.youtube.com/@sandhikagalihWPU" class="card-link">Pelajari</a>
      </div>
    </div>
  </div>
-  <!-- Quiz End -->
+
+ <div class="col-md-2 col-sm-12 mb-3">
+   <div class="card">
+     <img src="img/thumbnail/pyt.png" class="card-img-top" alt="...">
+     <div class="card-body">
+       <div class="card-title"><h4>Belajar Python</h4></div>
+       Python adalah bahasa pemrograman tujuan umum yang ditafsirkan, tingkat tinggi.
+     </div>
+     <div class="card-footer">
+       <a href="https://www.youtube.com/@sandhikagalihWPU" class="card-link">Pelajari</a>
+     </div>
+   </div>
+ </div>
+
+    <!-- Cards End -->
 
 @endsection
