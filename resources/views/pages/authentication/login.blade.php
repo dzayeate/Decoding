@@ -7,8 +7,8 @@
 @endsection
 
 @section('js_vendor')
-    <script src="/js/vendor/jquery.validate/jquery.validate.min.js"></script>
-    <script src="/js/vendor/jquery.validate/additional-methods.min.js"></script>
+{{--    <script src="/js/vendor/jquery.validate/jquery.validate.min.js"></script>--}}
+{{--    <script src="/js/vendor/jquery.validate/additional-methods.min.js"></script>--}}
 @endsection
 
 @section('js_page')
@@ -46,7 +46,8 @@
                 </p>
             </div>
             <div>
-                <form id="loginForm" class="tooltip-end-bottom" novalidate>
+                <form id="loginForm" action="/Pages/Authentication/Login  " method="post" class="tooltip-end-bottom" novalidate>
+                    @csrf
                     <div class="mb-3 filled form-group tooltip-end-top">
                         <i data-acorn-icon="email"></i>
                         <input class="form-control" placeholder="Email" name="email" />
