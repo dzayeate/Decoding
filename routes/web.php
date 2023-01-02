@@ -47,13 +47,6 @@ Route::prefix('Course')->group(function () {
     Route::view('List', 'course/list');
     Route::view('Detail', 'course/detail');
 
-
-    Route::prefix('Quiz')->group(function () {
-        Route::redirect('/', '/Quiz/List');
-        Route::view('List', 'course/quiz/list');
-        Route::view('Detail', 'course/quiz/detail');
-        Route::view('Result', 'course/quiz/result');
-    });
 });
 
 /*
@@ -68,11 +61,14 @@ Route::prefix('Dashboards')->group(function () {
     Route::view('Visual', 'dashboards/visual');
     Route::view('Analytic', 'dashboards/analytic');
 
-    Route::prefix('Quiz')->group(function () {
-        Route::redirect('/', '/Quiz/List');
-        Route::view('List', 'course/quiz/list');
-        Route::view('Detail', 'course/quiz/detail');
-        Route::view('Result', 'course/quiz/result');
+    Route::prefix('Profile')->group(function () {
+        Route::get('{id}/Edit', function (){
+            return view('dashboards/profile/standard', [
+                'user' => Auth::user()
+            ]);
+
+        } );
+        Route::put('{id}', [\App\Http\Controllers\ProfileController::class, 'update']);
     });
 });
 
@@ -91,6 +87,12 @@ Route::prefix('Admin')->group(function () {
 
     Route::prefix('Authentication')->group(function () {
         Route::view('Users', 'admin/authentication/users');
+        Route::view('Roles', 'admin/authentication/roles');
+        Route::view('Permissions', 'admin/authentication/permissions');
+    });
+
+    Route::prefix('CRUD')->group(function () {
+        Route::view('Course', 'admin/crud/courses');
         Route::view('Roles', 'admin/authentication/roles');
         Route::view('Permissions', 'admin/authentication/permissions');
     });
@@ -123,6 +125,7 @@ Route::prefix('Pages')->group(function () {
         Route::post('Register', [RegisterController::class, 'store']);
         Route::post('Login', [LoginController::class, 'authenticate']);
         Route::view('Login', 'pages/authentication/login');
+        Route::post('Logout', [LoginController::class, 'logout']);
         Route::view('Register', 'pages/authentication/register');
         Route::view('ForgotPassword', 'pages/authentication/forgot_password');
         Route::view('ResetPassword', 'pages/authentication/reset_password');

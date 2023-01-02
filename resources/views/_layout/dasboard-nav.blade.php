@@ -1,7 +1,11 @@
+<?php
+$user =  Auth::user();
+?>
+
 <div class="nav-content d-flex">
     <!-- Logo Start -->
     <div class="logo position-relative">
-        <a href="/">
+        <a href="/Dashboards/">
             <!-- Logo can be added directly -->
             <!-- <img src="/img/logo/logo-white.svg" alt="logo" /> -->
 
@@ -26,7 +30,7 @@
     <div class="user-container d-flex">
         <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img class="profile" alt="profile" src="/img/profile/killua.jpg" />
-            <div class="name">Asril Permana</div>
+            <div class="name">{{$user->name}}</div>
         </a>
         <div class="dropdown-menu dropdown-menu-end user-menu wide">
             <div class="row mb-3 ms-0 me-0">
@@ -36,14 +40,17 @@
                 <div class="col-6 ps-1 pe-1">
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#">User Info</a>
+                            <a href="/Dashboards/Profile/{{$user->id}}/Edit">User Info</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-6 pe-1 ps-1">
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#">Logout</a>
+                            <form action="/Pages/Authentication/Logout" method="post">
+                                @csrf
+                            <button type="submit">Logout</button>
+                            </form>
                         </li>
                     </ul>
                 </div>
