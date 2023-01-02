@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,6 +67,13 @@ Route::prefix('Dashboards')->group(function () {
     Route::view('Default', 'dashboards/default');
     Route::view('Visual', 'dashboards/visual');
     Route::view('Analytic', 'dashboards/analytic');
+
+    Route::prefix('Quiz')->group(function () {
+        Route::redirect('/', '/Quiz/List');
+        Route::view('List', 'course/quiz/list');
+        Route::view('Detail', 'course/quiz/detail');
+        Route::view('Result', 'course/quiz/result');
+    });
 });
 
 
@@ -111,6 +120,8 @@ Route::prefix('Pages')->group(function () {
     Route::view('/', 'pages/index');
 
     Route::prefix('Authentication')->group(function () {
+        Route::post('Register', [RegisterController::class, 'store']);
+        Route::post('Login', [LoginController::class, 'authenticate']);
         Route::view('Login', 'pages/authentication/login');
         Route::view('Register', 'pages/authentication/register');
         Route::view('ForgotPassword', 'pages/authentication/forgot_password');

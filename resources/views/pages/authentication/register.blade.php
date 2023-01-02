@@ -1,14 +1,14 @@
 @php
-    $title = 'Login Page';
-    $description = 'Login Page'
+    $title = 'Register Page';
+    $description = 'Register Page'
 @endphp
 @extends('layout_full',['title'=>$title, 'description'=>$description])
 @section('css')
 @endsection
 
 @section('js_vendor')
-    <script src="/js/vendor/jquery.validate/jquery.validate.min.js"></script>
-    <script src="/js/vendor/jquery.validate/additional-methods.min.js"></script>
+{{--    <script src="/js/vendor/jquery.validate/jquery.validate.min.js"></script>--}}
+{{--    <script src="/js/vendor/jquery.validate/additional-methods.min.js"></script>--}}
 @endsection
 
 @section('js_page')
@@ -46,18 +46,19 @@
                 </p>
             </div>
             <div>
-                <form id="registerForm" class="tooltip-end-bottom" novalidate>
+                <form id="registerForm" method="post" action="/Pages/Authentication/Register" class="tooltip-end-bottom" novalidate>
+                    @csrf
                     <div class="mb-3 filled form-group tooltip-end-top">
                         <i data-acorn-icon="user"></i>
-                        <input class="form-control" placeholder="Name" name="registerName" />
+                        <input class="form-control" placeholder="Name" name="name" />
                     </div>
                     <div class="mb-3 filled form-group tooltip-end-top">
                         <i data-acorn-icon="email"></i>
-                        <input class="form-control" placeholder="Email" name="registerEmail" />
+                        <input class="form-control" placeholder="Email" name="email" />
                     </div>
                     <div class="mb-3 filled form-group tooltip-end-top">
                         <i data-acorn-icon="lock-off"></i>
-                        <input class="form-control" name="registerPassword" type="password" placeholder="Password" />
+                        <input class="form-control" name="password" type="password" placeholder="Password" />
                     </div>
                     <div class="mb-3 position-relative form-group">
                         <div class="form-check">
@@ -68,7 +69,7 @@
                             </label>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-primary">Signup</button>
+                    <button type="submit" role="button" class="btn btn-lg btn-primary">Signup</button>
                 </form>
             </div>
         </div>

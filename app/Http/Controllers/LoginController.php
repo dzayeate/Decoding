@@ -16,12 +16,20 @@ class LoginController
 
     public function authenticate( Request $request )
     {
-        $request->validate([
-            'registerEmail' => 'required|email:dns',
-            'registerPassword' => 'required',
+       $validatedData =  $request->validate([
+            'email' => 'required|email:dns',
+            'password' => 'required',
         ]);
 
-        dd('login success');
+       if(Auth::attempt($validatedData)) {
+           $request->session()->regenerate();
+
+           return redirect('/Dashboards/')->with('success', 'Login berhasil');
+
+
+       }
+
+
     }
 
 
