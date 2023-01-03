@@ -96,7 +96,7 @@ $user =  Auth::user();
                 </a>
                 <ul id="crud">
                     <li>
-                        <a href="/Admin/Courses">
+                        <a href="/Admin/CRUD/Course">
                             <span class="label">Course</span>
                         </a>
                     </li>

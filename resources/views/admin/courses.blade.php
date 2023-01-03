@@ -36,8 +36,8 @@
                 <!-- Add Button Start -->
                 <div class="col-12 col-md-5 d-flex align-items-start justify-content-end">
                     <button type="button" class="btn btn-outline-primary btn-icon btn-icon-start w-100 w-md-auto add-datatable">
-                        <i data-acorn-icon="plus"></i>
-                        <span><a href="/Admin/CRUD/Course">Add New</a></span>
+
+                        <span><a href="/Admin/CRUD/Course/create"><i data-acorn-icon="plus"></i>Add New</a></span>
                     </button>
                 </div>
                 <!-- Add Button End -->
@@ -47,6 +47,8 @@
 
         <section class="scroll-section" id="hover">
             <h2 class="small-title">Avalaible Courses</h2>
+
+
             <div class="card mb-5">
                 <div class="card-body">
                     <!-- Hover Controls Start -->
@@ -101,12 +103,13 @@
                     <!-- Hover Controls End -->
 
                     <!-- Hover Table Start -->
+
                     <table class="data-table data-table-pagination data-table-standard responsive nowrap hover"
                            id="datatableHover" data-order='[[ 0, "desc" ]]'>
                         <thead>
                         <tr>
                             <th class="text-muted text-small text-uppercase">Title</th>
-                            <th class="text-muted text-small text-uppercase">Content</th>
+                            <th class="text-muted text-small text-uppercase">Chapter</th>
                             <th class="text-muted text-small text-uppercase">Description</th>
                             <th class="text-muted text-small text-uppercase">Category</th>
                             <th class="text-muted text-small text-uppercase">Level</th>
@@ -114,15 +117,13 @@
                         </tr>
                         </thead>
                         <tbody>
+                        @foreach($courses as $course)
                         <tr>
-                            <td class="text-alternate">Belajar HTML Dasar</td>
-                            <td>8 Chapter</td>
-                            <td class="text-alternate">HTML5 adalah sebuah bahasa markah untuk menstrukturkan
-                                dan
-                                <br> menampilkan isi dari World Wide Web, sebuah teknologi inti dari Internet.
-                            </td>
-                            <td class="text-alternate">HTML</td>
-                            <td class="text-alternate">Novice</td>
+                            <td class="text-alternate">{{$course->title}}</td>
+                            <td>{{$course->chapter}}</td>
+                            <td class="text-alternate">{{$course->$description}}</td>
+                            <td class="text-alternate">{!! $course->categories !!}</td>
+                            <td class="text-alternate">{{$course->level}}</td>
                             <td><button class="btn btn-icon btn-icon-only btn-outline-info btn-sm dropdown"
                                         data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
                                     <i data-acorn-icon="eye"></i>
@@ -136,146 +137,13 @@
                                     <i data-acorn-icon="bin"></i>
                                 </button></td>
                         </tr>
-                        <tr>
-                            <td class="text-alternate">Belajar CSS Dasar</td>
-                            <td>8 Chapter</td>
-                            <td class="text-alternate">CSS adalah singkatan dari Cascading Style Sheets, yang
-                                merupakan
-                                <br> bahasa style sheet yang digunakan untuk menggambarkan tampilan dari sebuah
-                                <br> dokumen yang ditulis dengan menggunakan bahasa markup.
-                            </td>
-                            <td class="text-alternate">CSS</td>
-                            <td class="text-alternate">Novice</td>
-                            <td><button class="btn btn-icon btn-icon-only btn-outline-info btn-sm dropdown"
-                                        data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="eye"></i>
-                                </button><button
-                                    class="btn btn-icon btn-icon-only btn-outline-warning btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="edit"></i>
-                                </button><button
-                                    class="btn btn-icon btn-icon-only btn-outline-danger btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="bin"></i>
-                                </button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-alternate">Belajar Javascript Dasar</td>
-                            <td>8 Chapter</td>
-                            <td class="text-alternate">JavaScript adalah bahasa pemrograman tingkat tinggi dan
-                                dinamis.
-                                <br> JavaScript sering disebut sebagai bahasa pemrograman web, karena
-                                <br> JavaScript digunakan untuk memberikan interaksi pada halaman web.
-                            </td>
-                            <td class="text-alternate">Javascript</td>
-                            <td class="text-alternate">Novice</td>
-                            <td><button class="btn btn-icon btn-icon-only btn-outline-info btn-sm dropdown"
-                                        data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="eye"></i>
-                                </button><button
-                                    class="btn btn-icon btn-icon-only btn-outline-warning btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="edit"></i>
-                                </button><button
-                                    class="btn btn-icon btn-icon-only btn-outline-danger btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="bin"></i>
-                                </button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-alternate">Belajar PHP Dasar</td>
-                            <td>8 Chapter</td>
-                            <td class="text-alternate">PHP adalah singkatan dari Hypertext Preprocessor, yang
-                                merupakan
-                                <br> bahasa pemrograman server-side scripting yang bersifat open source.
-                            </td>
-                            <td class="text-alternate">PHP</td>
-                            <td class="text-alternate">Novice</td>
-                            <td><button class="btn btn-icon btn-icon-only btn-outline-info btn-sm dropdown"
-                                        data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="eye"></i>
-                                </button><button
-                                    class="btn btn-icon btn-icon-only btn-outline-warning btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="edit"></i>
-                                </button><button
-                                    class="btn btn-icon btn-icon-only btn-outline-danger btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="bin"></i>
-                                </button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-alternate">Belajar Laravel Dasar</td>
-                            <td>8 Chapter</td>
-                            <td class="text-alternate">Laravel adalah sebuah framework PHP yang bersifat open
-                                source.
-                                <br> Laravel dikembangkan oleh Taylor Otwell dan dirilis pada tahun 2011.
-                            </td>
-                            <td class="text-alternate">Laravel</td>
-                            <td class="text-alternate">Novice</td>
-                            <td><button class="btn btn-icon btn-icon-only btn-outline-info btn-sm dropdown"
-                                        data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="eye"></i>
-                                </button><button
-                                    class="btn btn-icon btn-icon-only btn-outline-warning btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="edit"></i>
-                                </button><button
-                                    class="btn btn-icon btn-icon-only btn-outline-danger btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="bin"></i>
-                                </button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-alternate">Belajar React JS Dasar</td>
-                            <td>8 Chapter</td>
-                            <td class="text-alternate">React JS adalah sebuah library JavaScript yang digunakan
-                                untuk
-                                <br> membangun antarmuka pengguna (user interface / UI).
-                            </td>
-                            <td class="text-alternate">React JS</td>
-                            <td class="text-alternate">Novice</td>
-                            <td><button class="btn btn-icon btn-icon-only btn-outline-info btn-sm dropdown"
-                                        data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="eye"></i>
-                                </button><button
-                                    class="btn btn-icon btn-icon-only btn-outline-warning btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="edit"></i>
-                                </button><button
-                                    class="btn btn-icon btn-icon-only btn-outline-danger btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="bin"></i>
-                                </button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-alternate">Belajar Vue JS Dasar</td>
-                            <td>8 Chapter</td>
-                            <td class="text-alternate">Vue JS adalah sebuah framework JavaScript yang bersifat
-                                open
-                                <br> source yang digunakan untuk membangun antarmuka pengguna (user interface /
-                                UI).
-                            </td>
-                            <td class="text-alternate">Vue JS</td>
-                            <td class="text-alternate">Novice</td>
-                            <td><button class="btn btn-icon btn-icon-only btn-outline-info btn-sm dropdown"
-                                        data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="eye"></i>
-                                </button><button
-                                    class="btn btn-icon btn-icon-only btn-outline-warning btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="edit"></i>
-                                </button><button
-                                    class="btn btn-icon btn-icon-only btn-outline-danger btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-acorn-icon="bin"></i>
-                                </button></td>
-                        </tr>
+                        @endforeach
                         </tbody>
                     </table>
                     <!-- Hover Table End -->
                 </div>
             </div>
+
         </section>
         <!-- Hover End -->
     </div>
