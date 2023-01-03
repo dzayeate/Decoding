@@ -1,7 +1,7 @@
 @php
     $html_tag_data = ["override"=>'{"attributes" : { "placement": "vertical" }}'];
-    $title = 'Create Courses';
-    $description= 'Create Courses';
+    $title = 'Edit Courses';
+    $description= 'Edit Courses';
     $breadcrumbs = ["/Admin/Index"=>"Dashboard Admin"]
 @endphp
 @extends('layout-admin-dashboard',['html_tag_data'=>$html_tag_data, 'title'=>$title, 'description'=>$description])
@@ -66,9 +66,10 @@
                                         <label>Level</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input name="categories" class="form-control" placeholder="Chapter" />
+                                        <input name="categories" id="tagsFloatingLabel" />
                                         <label>Categories</label>
                                     </div>
+
                                     <div class="form-floating mb-3">
                                         <input name="embed"  class="form-control" placeholder="Embed Youtube" />
                                         <label>Embed Youtube</label>
