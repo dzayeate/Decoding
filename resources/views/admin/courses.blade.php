@@ -10,6 +10,7 @@
 @endsection
 
 @section('js_vendor')
+    <script src="/js/cs/scrollspy.js"></script>
     <script src="/js/vendor/datatables.min.js"></script>
 @endsection
 
@@ -121,20 +122,30 @@
                         <tr>
                             <td class="text-alternate">{{$course->title}}</td>
                             <td>{{$course->chapter}}</td>
-                            <td class="text-alternate">{{$course->$description}}</td>
+                            <td class="text-alternate">{{$course->description}}</td>
                             <td class="text-alternate">{!! $course->categories !!}</td>
                             <td class="text-alternate">{{$course->level}}</td>
-                            <td><button class="btn btn-icon btn-icon-only btn-outline-info btn-sm dropdown"
-                                        data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
+                            <td>
+                                <button class="btn"
+                                        type="button" data-bs-offset="0,3">
+                                    <a class="btn-icon btn-icon-only btn-outline-info btn-sm" href="/Admin/CRUD/Course/{{$course->id}}">
                                     <i data-acorn-icon="eye"></i>
-                                </button><button
-                                    class="btn btn-icon btn-icon-only btn-outline-warning btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
+                                    </a>
+                                </button>
+                                <button
+                                    class="btn" type="button" >
+                                    <a class=" btn-icon btn-icon-only btn-outline-warning btn-sm" href="/Admin/CRUD/Course/{{$course->id}}/edit ">
                                     <i data-acorn-icon="edit"></i>
-                                </button><button
-                                    class="btn btn-icon btn-icon-only btn-outline-danger btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
+                                    </a>
+
+                                </button>
+                                <button
+                                    class="btn" type="button">
+                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn-icon btn-icon-only btn-outline-danger btn-sm" href="Admin/CRUD/Course/{Course}">
                                     <i data-acorn-icon="bin"></i>
+
+                                    </a>
+
                                 </button></td>
                         </tr>
                         @endforeach
@@ -146,5 +157,24 @@
 
         </section>
         <!-- Hover End -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabelDefault">Delete</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">Apakah Anda Yakin Akan Menghapus Course Ini ?</div>
+                    <div class="modal-footer">
+                        <form action="/Admin/CRUD/Course/{{$course->id}}" method="post" >
+                            @csrf
+                            @method('DELETE')
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection

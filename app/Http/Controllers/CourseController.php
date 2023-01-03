@@ -12,7 +12,6 @@ class CourseController extends Controller
         return view('/Admin/Courses', [
             'courses' => Course::all()
         ]);
-
     }
 
     public function create()
@@ -32,26 +31,65 @@ class CourseController extends Controller
         ]);
         Course::create($validatedData);
 
-        dd('sukses');
-
+        return redirect('/Admin/CRUD/Course')->with('success', 'Category has been updated!');
     }
 
     public function show($id)
     {
-    }
-
-    public function edit($id)
-    {
-        return view('/Admin/CRUD/Courses-edit', [
-            'course' => Course::findOrFail($id)
+        $course = Course::find($id);
+        // dd($course);
+        return view('/admin/crud/course-detail', [
+            'course' => $course
         ]);
     }
 
-    public function update(Request $request, $id)
+    public function edit(Course $course, $id)
     {
+        $course = Course::find($id);
+        // dd($course);
+        return view('/admin/crud/coursesedit', [
+            'course' => $course
+        ]);
+    }
+
+    public function update(Request $request, Course $course, $id)
+    {
+        $course = Course::find($id);
+
+         $rules = [
+             'title' => 'required',
+             'description' => 'required',
+             'level' => 'required',
+             'chapter' => 'required',
+             'categories' => 'required',
+             'embed' => 'required',
+         ];
+
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'level' => 'required',
+            'chapter' => 'required',
+            'categories' => 'required',
+            'embed' => 'required',
+        ]);
+
+        $validatedData = $request->validate($rules);
+
+//         dd($validatedData);
+
+
+        Course::whereIn('id', $course)->update($validatedData);
+
+        return redirect('/Admin/CRUD/Course')->with('success', 'Category has been updated!');
     }
 
     public function destroy($id)
     {
+        $course = Course::find($id);
+        $course->delete();
+//        dd("Course deleted");
+
+        return redirect('/Admin/CRUD/Course')->with('success', 'Category has been deleted!');
     }
 }
