@@ -3,7 +3,7 @@
     $title = 'Dashboard';
     $description= 'Decoding elearning platform course explore.';
 @endphp
-@extends('layout-admin-dashboard',['html_tag_data'=>$html_tag_data, 'title'=>$title, 'description'=>$description,])
+@extends('admin-layout-dashboard',['html_tag_data'=>$html_tag_data, 'title'=>$title, 'description'=>$description,])
 
 @section('css')
     <link rel="stylesheet" href="/css/vendor/datatables.min.css" />
@@ -39,7 +39,7 @@
 
         <!-- Hover Start -->
         <section class="scroll-section" id="hover">
-            <h2 class="small-title">Avalaible Roles</h2>
+            <h2 class="small-title">Avalaible Users</h2>
             <div class="card mb-5">
                 <div class="card-body">
                     <!-- Hover Controls Start -->

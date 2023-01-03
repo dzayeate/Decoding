@@ -4,7 +4,7 @@
     $description= 'Create Courses';
     $breadcrumbs = ["/Admin/Index"=>"Dashboard Admin"]
 @endphp
-@extends('layout-admin-dashboard',['html_tag_data'=>$html_tag_data, 'title'=>$title, 'description'=>$description])
+@extends('admin-layout-dashboard',['html_tag_data'=>$html_tag_data, 'title'=>$title, 'description'=>$description])
 
 @section('css')
     <link rel="stylesheet" href="/css/vendor/select2.min.css"/>

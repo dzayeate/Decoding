@@ -47,9 +47,9 @@
                             <!-- Check Button Start -->
                             <div class="btn-group ms-1 check-all-container">
                                 <div class="btn btn-outline-primary btn-custom-control p-0 ps-3 pe-2" id="datatableCheckAllButton">
-                <span class="form-check float-end">
-                  <input type="checkbox" class="form-check-input" id="datatableCheckAll" />
-                </span>
+                            <   span class="form-check float-end">
+                                <input type="checkbox" class="form-check-input" id="datatableCheckAll" />
+                                </span>
                                 </div>
                                 <button
                                         type="button"

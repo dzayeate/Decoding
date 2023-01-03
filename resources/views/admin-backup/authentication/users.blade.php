@@ -3,7 +3,7 @@
     $title = 'Dashboard';
     $description= 'Decoding elearning platform course explore.';
 @endphp
-@extends('layout-admin-dashboard',['html_tag_data'=>$html_tag_data, 'title'=>$title, 'description'=>$description,])
+@extends('admin-layout-dashboard',['html_tag_data'=>$html_tag_data, 'title'=>$title, 'description'=>$description,])
 
 @section('css')
     <link rel="stylesheet" href="/css/vendor/datatables.min.css" />
@@ -33,13 +33,21 @@
                     </nav>
                 </div>
                 <!-- Title End -->
+                <!-- Add Button Start -->
+                <div class="col-12 col-md-5 d-flex align-items-start justify-content-end">
+                    <button type="button" class="btn btn-outline-primary btn-icon btn-icon-start w-100 w-md-auto add-datatable">
+                        <i data-acorn-icon="plus"></i>
+                        <span>Add New</span>
+                    </button>
+                </div>
+                <!-- Add Button End -->
             </div>
         </div>
         <!-- Title and Top Buttons End -->
 
         <!-- Hover Start -->
         <section class="scroll-section" id="hover">
-            <h2 class="small-title">Avalaible Roles</h2>
+            <h2 class="small-title">Avalaible Users</h2>
             <div class="card mb-5">
                 <div class="card-body">
                     <!-- Hover Controls Start -->
@@ -99,15 +107,17 @@
                         <thead>
                         <tr>
                             <th class="text-muted text-small text-uppercase">Name</th>
-                            <th class="text-muted text-small text-uppercase">Users</th>
-                            <th class="text-muted text-small text-uppercase">Permissions</th>
+                            <th class="text-muted text-small text-uppercase">Email</th>
+                            <th class="text-muted text-small text-uppercase">Role</th>
+                            <th class="text-muted text-small text-uppercase">Extra Permissions</th>
                             <th class="text-muted text-small text-uppercase">Action</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td class="text-alternate">Member</td>
-                            <td class="text-alternate">100 users</td>
+                            <td class="text-alternate">August Towne</td>
+                            <td class="text-alternate">gkunde@example.com</td>
+                            <td class="text-alternate">superadmin</td>
                             <td class="text-alternate">-</td>
                             <td>
                                 <button class="btn btn-icon btn-icon-only btn-outline-info btn-sm dropdown"
@@ -125,8 +135,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="text-alternate">Admin</td>
-                            <td class="text-alternate">1 users</td>
+                            <td class="text-alternate">Salvatore Gutmann Sr.</td>
+                            <td class="text-alternate">abraham.wolff@example.net</td>
+                            <td class="text-alternate">admin</td>
                             <td class="text-alternate">-</td>
                             <td>
                                 <button class="btn btn-icon btn-icon-only btn-outline-info btn-sm dropdown"
@@ -141,6 +152,27 @@
                                         data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
                                     <i data-acorn-icon="bin"></i>
                                 </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-alternate">Dr. Kaitlyn Kirlin</td>
+                            <td class="text-alternate">Kait@example.net</td>
+                            <td class="text-alternate">member</td>
+                            <td class="text-alternate">-</td>
+                            <td>
+                                <button class="btn btn-icon btn-icon-only btn-outline-info btn-sm dropdown"
+                                        data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
+                                    <i data-acorn-icon="eye"></i>
+                                </button>
+                                <button class="btn btn-icon btn-icon-only btn-outline-warning btn-sm dropdown"
+                                        data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
+                                    <i data-acorn-icon="edit"></i>
+                                </button>
+                                <button class="btn btn-icon btn-icon-only btn-outline-danger btn-sm dropdown"
+                                        data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
+                                    <i data-acorn-icon="bin"></i>
+                                </button>
+
                             </td>
                         </tr>
                         </tbody>

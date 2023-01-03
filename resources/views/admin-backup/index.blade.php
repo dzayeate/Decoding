@@ -1,25 +1,20 @@
 @php
     $html_tag_data = ["override"=>'{"attributes" : { "placement": "vertical" }}'];
-    $title = 'Dashboards Admin';
-    $heading = ' Dashboard Admin';
-    $description= 'Decoding elearning platform dashboard.';
+    $title = 'Dashboard';
+    $description= 'Decoding elearning platform course explore.';
 @endphp
-@extends('layout-admin-dashboard',['html_tag_data'=>$html_tag_data, 'title'=>$title, 'description'=>$description,])
+@extends('admin-layout-dashboard',['html_tag_data'=>$html_tag_data, 'title'=>$title, 'description'=>$description,])
 
 @section('css')
-    <link rel="stylesheet" href="/css/vendor/glide.core.min.css"/>
+
 @endsection
 
 @section('js_vendor')
-    <script src="/js/vendor/glide.min.js"></script>
-    <script src="/js/vendor/Chart.bundle.min.js"></script>
     <script src="/js/vendor/jquery.barrating.min.js"></script>
 @endsection
 
 @section('js_page')
-    <script src="/js/cs/glide.custom.js"></script>
-    <script src="/js/cs/charts.extend.js"></script>
-    <script src="/js/pages/dashboard.elearning.js"></script>
+    <script src="/js/pages/course.explore.js"></script>
 @endsection
 
 @section('content')

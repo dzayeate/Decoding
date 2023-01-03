@@ -1,7 +1,7 @@
 @php
     $html_tag_data = ["override"=>'{"attributes" : { "placement": "vertical" }}'];
-    $title = 'Create Courses';
-    $description= 'Create Courses';
+    $title = 'Create Categories';
+    $description= 'Create Categories';
     $breadcrumbs = ["/Admin/Index"=>"Dashboard Admin"]
 @endphp
 @extends('layout-admin-dashboard',['html_tag_data'=>$html_tag_data, 'title'=>$title, 'description'=>$description])

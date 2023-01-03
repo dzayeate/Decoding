@@ -1,7 +1,11 @@
+<?php
+$user =  Auth::user();
+?>
+
 <div class="nav-content d-flex">
     <!-- Logo Start -->
     <div class="logo position-relative">
-        <a href="/">
+        <a href="/Dashboards/">
             <!-- Logo can be added directly -->
             <!-- <img src="/img/logo/logo-white.svg" alt="logo" /> -->
 
@@ -13,8 +17,7 @@
 
     <!-- Language Switch Start -->
     <div class="language-switch-container">
-        <button class="btn btn-empty language-button dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">EN</button>
+        <button class="btn btn-empty language-button dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN</button>
         <div class="dropdown-menu">
             <a href="#" class="dropdown-item">DE</a>
             <a href="#" class="dropdown-item active">EN</a>
@@ -25,10 +28,9 @@
 
     <!-- User Menu Start -->
     <div class="user-container d-flex">
-        <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
+        <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img class="profile" alt="profile" src="/img/profile/killua.jpg" />
-            <div class="name">dasds/div>
+            <div class="name">{{$user->name}}</div>
         </a>
         <div class="dropdown-menu dropdown-menu-end user-menu wide">
             <div class="row mb-3 ms-0 me-0">
@@ -38,7 +40,7 @@
                 <div class="col-6 ps-1 pe-1">
                     <ul class="list-unstyled">
                         <li>
-                            <a href="/Dashboards/Profile/ganti/Edit">User Info</a>
+                            <a href="/Dashboards/Profile/{{$user->id}}/Edit">User Info</a>
                         </li>
                     </ul>
                 </div>
@@ -47,7 +49,7 @@
                         <li>
                             <form action="/Pages/Authentication/Logout" method="post">
                                 @csrf
-                                <button type="submit">Logout</button>
+                            <button type="submit">Logout</button>
                             </form>
                         </li>
                     </ul>
