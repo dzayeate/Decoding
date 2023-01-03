@@ -1,16 +1,16 @@
 @php
-    $html_tag_data = ["override"=>'{"attributes" : { "placement": "vertical" }}'];
-    $title = 'Create Courses';
-    $description= 'Create Courses';
-    $breadcrumbs = ["/Admin/Index"=>"Dashboard Admin"]
+    $html_tag_data = ['override' => '{"attributes" : { "placement": "vertical" }}'];
+    $title = 'Edit Courses';
+    $description = 'Edit Courses';
+    $breadcrumbs = ['/Admin/Index' => 'Dashboard Admin'];
 @endphp
-@extends('admin-layout-dashboard',['html_tag_data'=>$html_tag_data, 'title'=>$title, 'description'=>$description])
+@extends('layout-admin-dashboard', ['html_tag_data' => $html_tag_data, 'title' => $title, 'description' => $description])
 
 @section('css')
-    <link rel="stylesheet" href="/css/vendor/select2.min.css"/>
-    <link rel="stylesheet" href="/css/vendor/select2-bootstrap4.min.css"/>
-    <link rel="stylesheet" href="/css/vendor/bootstrap-datepicker3.standalone.min.css"/>
-    <link rel="stylesheet" href="/css/vendor/tagify.css"/>
+    <link rel="stylesheet" href="/css/vendor/select2.min.css" />
+    <link rel="stylesheet" href="/css/vendor/select2-bootstrap4.min.css" />
+    <link rel="stylesheet" href="/css/vendor/bootstrap-datepicker3.standalone.min.css" />
+    <link rel="stylesheet" href="/css/vendor/tagify.css" />
 @endsection
 
 @section('js_vendor')
@@ -31,7 +31,7 @@
                 <section class="scroll-section" id="title">
                     <div class="page-title-container">
                         <h1 class="mb-0 pb-0 display-4">{{ $title }}</h1>
-                        @include('_layout.breadcrumb',['breadcrumbs'=>$breadcrumbs])
+                        @include('_layout.breadcrumb', ['breadcrumbs' => $breadcrumbs])
                     </div>
                 </section>
                 <!-- Title End -->
@@ -42,17 +42,26 @@
                     <section class="scroll-section" id="floatingLabel">
                         <div class="card mb-5">
                             <div class="card-body">
-                                <form>
+                                {{-- /Admin/CRUD/Course/{{ $course->id }} --}}
+                                <form action="/Admin/CRUD/Course/{{ $course->id }}" method="POST">
+                                    @method('PUT')
+                                    @csrf
                                     <div class="form-floating mb-3">
-                                        <input type="title" class="form-control" placeholder="Email" />
+                                        <input value="{{ old('name', $course->title) }}" name="title" type="title"
+                                            class="form-control" placeholder="Title" />
                                         <label>Title</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <textarea class="form-control" placeholder="Address" rows="3"></textarea>
+                                        <textarea name="description" class="form-control" value="value="{{ old('description', $course->description) }}" placeholder="Description" rows="3"></textarea>
                                         <label>Description</label>
                                     </div>
+                                    <div class="form-floating mb-3">
+                                        <input value="{{ old('chapter', $course->chapter) }}" name="chapter" type="title"
+                                            class="form-control" placeholder="Chapter" />
+                                        <label>Chapter</label>
+                                    </div>
                                     <div class="form-floating mb-3 w-100">
-                                        <select id="select2FloatingLabel">
+                                        <select name="level" id="select2FloatingLabel">
                                             <option label="&nbsp;"></option>
                                             <option value="Beginer">Beginer</option>
                                             <option value="Novice">Novice</option>
@@ -61,14 +70,16 @@
                                         <label>Level</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input id="tagsFloatingLabel" />
-                                        <label>Content</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="embed" class="form-control" placeholder="Email" />
-                                        <label>Embed Youtube</label>
+                                        <input value="{{ old('categories', $course->categories) }}" name="categories"
+                                            id="" class="form-control" />
+                                        <label>Categories</label>
                                     </div>
 
+                                    <div class="form-floating mb-3">
+                                        <input value="{{ old('embed', $course->embed) }}" name="embed"
+                                            class="form-control" placeholder="Embed Youtube" />
+                                        <label>Embed Youtube</label>
+                                    </div>
                                     <button class="btn btn-primary" type="submit">Submit</button>
                                 </form>
                             </div>

@@ -22,7 +22,7 @@
         @endforeach
         @endisset
     >
-        @include('_layout.dasboard-nav')
+        @include('_layout.sidebar-admin')
     </div>
     <main>
         @yield('content')

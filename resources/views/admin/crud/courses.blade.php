@@ -42,17 +42,22 @@
                     <section class="scroll-section" id="floatingLabel">
                         <div class="card mb-5">
                             <div class="card-body">
-                                <form>
+                                <form action="/Admin/CRUD/Course" method="post" enctype="multipart/form-data">
+                                    @csrf
                                     <div class="form-floating mb-3">
-                                        <input type="title" class="form-control" placeholder="Email" />
+                                        <input name="title" type="title" class="form-control" placeholder="Title" />
                                         <label>Title</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <textarea class="form-control" placeholder="Address" rows="3"></textarea>
+                                        <textarea name="description" class="form-control" placeholder="Description" rows="3"></textarea>
                                         <label>Description</label>
                                     </div>
+                                    <div class="form-floating mb-3">
+                                        <input name="chapter" type="title" class="form-control" placeholder="Chapter" />
+                                        <label>Chapter</label>
+                                    </div>
                                     <div class="form-floating mb-3 w-100">
-                                        <select id="select2FloatingLabel">
+                                        <select name="level" id="select2FloatingLabel">
                                             <option label="&nbsp;"></option>
                                             <option value="Beginer">Beginer</option>
                                             <option value="Novice">Novice</option>
@@ -61,11 +66,11 @@
                                         <label>Level</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input id="tagsFloatingLabel" />
-                                        <label>Content</label>
+                                        <input name="categories" class="form-control" placeholder="Chapter" />
+                                        <label>Categories</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input type="embed" class="form-control" placeholder="Email" />
+                                        <input name="embed"  class="form-control" placeholder="Embed Youtube" />
                                         <label>Embed Youtube</label>
                                     </div>
 

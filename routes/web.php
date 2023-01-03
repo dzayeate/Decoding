@@ -5,6 +5,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CourseController;
+use App\Models\Course;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +47,9 @@ Route::prefix('Landingpage')->group(function () {
 */
 Route::prefix('Course')->group(function () {
     Route::redirect('/', '/Course/Explore');
-    Route::view('Explore', 'course/explore');
+    Route::view('Explore', 'course/explore', [
+        'courses' => Course::all()
+    ]);
     Route::view('List', 'course/list');
     Route::view('Detail', 'course/detail');
 });
@@ -78,7 +82,7 @@ Route::prefix('Dashboards')->group(function () {
 */
 Route::prefix('Admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
-    Route::view('Courses', 'admin/courses');
+//    Route::view('Courses', 'admin/courses');
     Route::view('Quiz', 'admin/quiz');
     Route::view('Categories', 'admin/categories');
 
@@ -88,7 +92,8 @@ Route::prefix('Admin')->group(function () {
     });
 
     Route::prefix('CRUD')->group(function () {
-        Route::view('Course', 'admin/crud/courses');
+//        Route::view('Course', 'admin/crud/courses');
+        Route::resource('Course', CourseController::class);
         Route::view('Quiz', 'admin/crud/quiz');
         Route::view('Categories', 'admin/crud/categories');
     });
