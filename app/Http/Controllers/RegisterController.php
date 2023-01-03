@@ -20,27 +20,23 @@ class RegisterController extends Controller
 //         Validate the request...
 
         $validatedData = $request->validate([
-            'registerName' => 'required|max:255',
-            'registerEmail' => 'required|email:dns|max:255|unique:users,email',
-            'registerPassword' => 'required|min:8|max:255',
+            'name' => 'required|max:255',
+            'email' => 'required|email:dns|max:255|unique:users,email',
+            'password' => 'required|min:8|max:255',
         ]);
 
 //        return $request->all();
 
 //         Store the user...
 
-      $request['registerPassword'] = Hash::make($request['registerPassword']);
-
-            User::create ([
-                'name' => $request->registerName,
-                'email' => $request->registerEmail,
-                'password' => $request->registerPassword,
-            ]);
+      $validatedData['password'] = Hash::make($request['password']);
 
 
-            $request->session()->flash('success', 'Registration Succesfull! Please Login');
+            User::create($validatedData);
 
-            return redirect('/login');
+//            dd('registrasi success');
+
+            return redirect('Pages/Authentication/Login')->with('success', 'Registrasi berhasil');
 
     }
 

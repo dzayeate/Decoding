@@ -9,19 +9,43 @@ class LoginController
 
     public function index()
     {
-        return view('auth.login.index', [
+        return view('pages.authentication.login', [
             "title" => "Login Page ",
         ]);
     }
 
     public function authenticate( Request $request )
     {
-        $request->validate([
-            'registerEmail' => 'required|email:dns',
-            'registerPassword' => 'required',
+       $validatedData =  $request->validate([
+            'email' => 'required|email:dns',
+            'password' => 'required',
         ]);
 
-        dd('login success');
+       if(Auth::attempt($validatedData)) {
+           $request->session()->regenerate();
+
+           if (Auth::user()->role == 'admin') {
+               return redirect()->intended('/Admin');
+
+           } else if (Auth::user()->role == 'user') {
+               return redirect()->intended('/Dashboards/Elearning');
+           }
+
+        //    return redirect('/Pages/Authentication/Login')->with('success', 'Login berhasil');
+
+
+       }
+
+
+    }
+
+    public function logout (Request $request)
+    {
+        Auth::logout();
+        $request ->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 
 

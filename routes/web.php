@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,105 +17,99 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landingpage.index');
+// index routing via Route feature
+Route::redirect('/', '/Landingpage/Home');
+
+/*
+|--------------------------------------------------------------------------
+| Landing Page
+|--------------------------------------------------------------------------
+|
+*/
+Route::prefix('Landingpage')->group(function () {
+    Route::view('/', 'landingpage/index');
+    Route::view('Home', 'landingpage/index');
+    Route::view('Learningpaths', 'landingpage/learning');
+    Route::view('Testimonial', 'landingpage/testimonial');
+    Route::view('Subscriptions', 'landingpage/subscriptions');
+    Route::view('Contactus', 'landingpage/contact');
+    Route::view('Aboutus', 'landingpage/aboutus');
 });
 
-Route::get('/learningpaths', function () {
-    return view('landingpage.pages.learning');
+
+/*
+|--------------------------------------------------------------------------
+| Course Users
+|--------------------------------------------------------------------------
+|
+*/
+Route::prefix('Course')->group(function () {
+    Route::redirect('/', '/Course/Explore');
+    Route::view('Explore', 'course/explore');
+    Route::view('List', 'course/list');
+    Route::view('Detail', 'course/detail');
 });
 
-Route::get('/subcriptions', function () {
-    return view('landingpage.pages.price');
+/*
+|--------------------------------------------------------------------------
+| Dashboard Users
+|--------------------------------------------------------------------------
+|
+*/
+Route::prefix('Dashboards')->group(function () {
+    Route::get('/Elearning', [UserController::class, 'index']);
+
+    Route::prefix('Profile')->group(function () {
+        Route::get('{id}/Edit', function () {
+            return view('dashboards/profile/standard', [
+                'user' => Auth::user()
+            ]);
+        });
+        Route::put('{id}', [\App\Http\Controllers\ProfileController::class, 'update']);
+    });
 });
 
-Route::get('/contactus', function () {
-    return view('landingpage.pages.contact');
+
+/*
+|--------------------------------------------------------------------------
+| Admin
+|--------------------------------------------------------------------------
+|
+*/
+Route::prefix('Admin')->group(function () {
+    Route::get('/', [AdminController::class, 'index'])->name('admin.index');
+    Route::view('Courses', 'admin/courses');
+    Route::view('Quiz', 'admin/quiz');
+    Route::view('Categories', 'admin/categories');
+
+    Route::prefix('Authentication')->group(function () {
+        Route::view('Users', 'admin/authentication/users');
+        Route::view('Roles', 'admin/authentication/roles');
+    });
+
+    Route::prefix('CRUD')->group(function () {
+        Route::view('Course', 'admin/crud/courses');
+        Route::view('Quiz', 'admin/crud/quiz');
+        Route::view('Categories', 'admin/crud/categories');
+    });
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
+/*
+|--------------------------------------------------------------------------
+| Pages
+|--------------------------------------------------------------------------
+|
+*/
+Route::prefix('Pages')->group(function () {
+    Route::view('/', 'pages/index');
+
+    Route::prefix('Authentication')->group(function () {
+        Route::post('Register', [RegisterController::class, 'store']);
+        Route::post('Login', [LoginController::class, 'authenticate']);
+        Route::get('Login', [LoginController::class, 'index']);
+        Route::post('Logout', [LoginController::class, 'logout']);
+        Route::view('Register', 'pages/authentication/register');
+        Route::view('ForgotPassword', 'pages/authentication/forgot_password');
+        Route::view('ResetPassword', 'pages/authentication/reset_password');
+    });
 });
-
-Route::get('/login', function () {
-    return view('auth.login.index', [
-        "title" => "Login Page",
-    ]);
-});
-
-Route::get('/register', function () {
-    return view('auth.register.index', [
-        "title" => "Register Page",
-    ]);
-});
-
-Route::get('/forgot_password', function () {
-    return view('auth.forgot-password.index', [
-        "title" => "Forgot Password Page",
-    ]);
-});
-
-Route::get('/reset_password', function () {
-    return view('auth.reset-password.index', [
-        "title" => "Reset Password Page",
-    ]);
-});
-
-Route::get('/profile', function () {
-    return view('dashboard.profile.index', [
-        "title" => "Profile",
-    ]);
-});
-
-Route::get('/course', function () {
-    return view('dashboard.course.index', [
-        "title" => "Course",
-    ]);
-});
-
-Route::get('/quiz', function () {
-    return view('dashboard.quiz.index', [
-        "title" => "Quiz",
-    ]);
-});
-
-Route::get('/settings', function () {
-    return view('dashboard.settings.index', [
-        "title" => "Settings",
-    ]);
-});
-
-Route::get('/admin', function () {
-    return view('admin.index');
-});
-
-Route::get('/courses', function () {
-    return view('admin.courses.index', [
-        "title" => "Courses",
-    ]);
-});
-
-Route::get('/quis', function () {
-    return view('admin.quis.index', [
-        "title" => "Quis",
-    ]);
-});
-
-Route::get('/crud', function () {
-    return view('admin.crud.index', [
-        "title" => "CRUD",
-    ]);
-});
-
-Route::get('/upload', function () {
-    return view('admin.upload.index', [
-        "title" => "Upload",
-    ]);
-});
-
-Route::get('/login', [\App\Http\Controllers\LoginController::class, 'index']);
-Route::post('/login', [\App\Http\Controllers\LoginController::class, 'authenticate']);
-
-Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'index']);
-
-Route::post('/register', [\App\Http\Controllers\RegisterController::class, 'store']);
