@@ -9,7 +9,7 @@ class LoginController
 
     public function index()
     {
-        return view('auth.login.index', [
+        return view('pages.authentication.login', [
             "title" => "Login Page ",
         ]);
     }
@@ -24,7 +24,14 @@ class LoginController
        if(Auth::attempt($validatedData)) {
            $request->session()->regenerate();
 
-           return redirect('/Dashboards/')->with('success', 'Login berhasil');
+           if (Auth::user()->role == 'admin') {
+               return redirect()->intended('/Admin');
+
+           } else if (Auth::user()->role == 'user') {
+               return redirect()->intended('/Dashboards/Elearning');
+           }
+
+        //    return redirect('/Pages/Authentication/Login')->with('success', 'Login berhasil');
 
 
        }
