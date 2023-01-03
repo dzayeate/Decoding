@@ -176,7 +176,7 @@
                                 </a>
                                 <a href="#" class="d-block body-link">
                                     <i data-acorn-icon="email" class="me-2" data-acorn-size="17"></i>
-                                    <span class="align-middle">contact@blainecottrell.com</span>
+                                    <span class="align-middle">{{$user -> email}}</span>
                                 </a>
                             </div>
                         </div>

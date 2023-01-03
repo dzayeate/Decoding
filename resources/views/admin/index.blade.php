@@ -53,7 +53,7 @@
                     <div class="card hover-border-primary">
                         <div class="card-body">
                             <div class="heading d-flex justify-content-between lh-1-25 ">
-                                <span>Student</span>
+                                <a href="/"><span>Student</span></a>
                                 <i data-acorn-icon="office" class="text-primary"></i>
                             </div>
                             <div class="text-small text-muted mb-1">ACTIVE</div>

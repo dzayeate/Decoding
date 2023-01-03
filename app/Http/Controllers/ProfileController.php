@@ -12,7 +12,9 @@ class ProfileController extends Controller
 {
     public function index()
     {
-
+        return view('dashboards.profile.standard', [
+            "title" => "Profile Page",
+        ]);
     }
 
     public function update(Request $request,User $user)
