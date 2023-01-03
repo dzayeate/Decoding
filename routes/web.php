@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CourseController;
+use App\Models\Course;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,7 +47,9 @@ Route::prefix('Landingpage')->group(function () {
 */
 Route::prefix('Course')->group(function () {
     Route::redirect('/', '/Course/Explore');
-    Route::view('Explore', 'course/explore');
+    Route::view('Explore', 'course/explore', [
+        'courses' => Course::all()
+    ]);
     Route::view('List', 'course/list');
     Route::view('Detail', 'course/detail');
 });

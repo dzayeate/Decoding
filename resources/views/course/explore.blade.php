@@ -48,118 +48,30 @@
             </div>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3 mb-5">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="/img/course/small/course-1.webp" class="card-img-top sh-22" alt="card image" />
-                    <div class="card-body">
-                        <h5 class="heading mb-0"><a href="/Course/Detail" class="body-link stretched-link">Advanced React Web Developer Course</a></h5>
-                    </div>
-                    <div class="card-footer border-0 pt-0">
-                        <div class="mb-2">
-                            <div class="br-wrapper br-theme-cs-icon d-inline-block">
-                                <select class="rating" name="rating" autocomplete="off" data-readonly="true" data-initial-rating="5">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                            <div class="text-muted d-inline-block text-small align-text-top">(114)</div>
+            @foreach($courses as $course)
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/img/course/small/course-1.webp" class="card-img-top sh-22" alt="card image" />
+                        <div class="card-body">
+                            <h5 class="heading mb-0"><a href="/admin/crud/course-detail" class="body-link stretched-link">{{$course->title}}</a></h5>
                         </div>
-                        <div class="card-text mb-0">
-                            <div class="text-muted text-overline text-small">
-                                <del>$ 24.60</del>
+                        <div class="card-footer border-0 pt-0">
+                            <div class="mb-2">
+                                <div class="br-wrapper br-theme-cs-icon d-inline-block">
+                                    <select class="rating" name="rating" autocomplete="off" data-readonly="true" data-initial-rating="5">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="text-muted d-inline-block text-small align-text-top">(114)</div>
                             </div>
-                            <div>$ 18.90</div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="/img/course/small/course-2.webp" class="card-img-top sh-22" alt="card image" />
-                    <div class="card-body">
-                        <h5 class="heading mb-0"><a href="/Course/Detail" class="body-link stretched-link">Python for Beginners: From Zero to Expert</a></h5>
-                    </div>
-                    <div class="card-footer border-0 pt-0">
-                        <div class="mb-2">
-                            <div class="br-wrapper br-theme-cs-icon d-inline-block">
-                                <select class="rating" name="rating" autocomplete="off" data-readonly="true" data-initial-rating="5">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                            <div class="text-muted d-inline-block text-small align-text-top">(84)</div>
-                        </div>
-                        <div class="card-text mb-0">
-                            <div class="text-muted text-overline text-small">
-                                <del>$ 33.25</del>
-                            </div>
-                            <div>$ 22.15</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="/img/course/small/course-3.webp" class="card-img-top sh-22" alt="card image" />
-                    <div class="card-body">
-                        <h5 class="heading mb-0"><a href="/Course/Detail" class="body-link stretched-link">Learn and Understand NodeJS</a></h5>
-                    </div>
-                    <div class="card-footer border-0 pt-0">
-                        <div class="mb-2">
-                            <div class="br-wrapper br-theme-cs-icon d-inline-block">
-                                <select class="rating" name="rating" autocomplete="off" data-readonly="true" data-initial-rating="5">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                            <div class="text-muted d-inline-block text-small align-text-top">(117)</div>
-                        </div>
-                        <div class="card-text mb-0">
-                            <div class="text-muted text-overline text-small">
-                                <del>$ 28.15</del>
-                            </div>
-                            <div>$ 22.50</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="/img/course/small/course-4.webp" class="card-img-top sh-22" alt="card image" />
-                    <div class="card-body">
-                        <h5 class="heading mb-0"><a href="/Course/Detail" class="body-link stretched-link">HTML 5 - The Complete Guide for Every Level</a></h5>
-                    </div>
-                    <div class="card-footer border-0 pt-0">
-                        <div class="mb-2">
-                            <div class="br-wrapper br-theme-cs-icon d-inline-block">
-                                <select class="rating" name="rating" autocomplete="off" data-readonly="true" data-initial-rating="5">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                            <div class="text-muted d-inline-block text-small align-text-top">(53)</div>
-                        </div>
-                        <div class="card-text mb-0">
-                            <div class="text-muted text-overline text-small">
-                                <del>$ 16.75</del>
-                            </div>
-                            <div>$ 12.50</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <!-- Popular End -->
 

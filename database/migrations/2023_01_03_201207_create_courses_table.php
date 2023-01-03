@@ -10,12 +10,11 @@ return new class extends Migration {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->string('level');
             $table->string('chapter');
             $table->string('categories');
             $table->string('embed');
-
 
             $table->timestamps();
         });
