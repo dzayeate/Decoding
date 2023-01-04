@@ -98,13 +98,13 @@
         <h2 class="small-title">Sale</h2>
         <div class="row g-3">
             <div class="col-lg-6 mb-5 position-relative">
-                <span class="badge rounded-pill bg-primary me-1 position-absolute e-4 t-n2 z-index-1">-30%</span>
+
                 <div class="card w-100 sh-24 hover-img-scale-up">
                     <img src="/img/banner/cta-horizontal-short-3.webp" class="card-img h-100 scale" alt="card image" />
                     <div class="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
                         <div>
                             <div class="cta-3 mb-3 text-white opacity-75 w-75">Introduction to Machine Learning</div>
-                            <div class="mb-4 text-white opacity-75">$ 26.25</div>
+
                             <a href="/Course/Detail" class="btn btn-icon btn-icon-start btn-primary stretched-link">
                                 <i data-acorn-icon="chevron-right"></i>
                                 <span>View</span>
@@ -114,13 +114,13 @@
                 </div>
             </div>
             <div class="col-lg-6 mb-5 position-relative">
-                <span class="badge rounded-pill bg-primary me-1 position-absolute e-4 t-n2 z-index-1">-25%</span>
+
                 <div class="card w-100 sh-24 hover-img-scale-up">
                     <img src="/img/banner/cta-horizontal-short-4.webp" class="card-img h-100 scale" alt="card image" />
                     <div class="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
                         <div>
                             <div class="cta-3 mb-3 text-white opacity-75 w-75">Basic Robotics Coding with Arduino</div>
-                            <div class="mb-4 text-white opacity-75">$ 19.80</div>
+
                             <a href="/Course/Detail" class="btn btn-icon btn-icon-start btn-primary stretched-link">
                                 <i data-acorn-icon="chevron-right"></i>
                                 <span>View</span>

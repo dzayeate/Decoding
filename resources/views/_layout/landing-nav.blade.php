@@ -85,12 +85,6 @@
                 </a>
             </li>
             <li>
-                <a href="/Landingpage/Testimonial" data-href="landingpage/testimonial">
-                    <i data-acorn-icon="graduation" class="icon" data-acorn-size="18"></i>
-                    <span class="label">Testimonial</span>
-                </a>
-            </li>
-            <li>
                 <a href="#langganan" data-href="landingpage/langganan">
                     <i data-acorn-icon="notebook-1" class="icon" data-acorn-size="18"></i>
                     <span class="label">Langganan</span>
@@ -112,11 +106,6 @@
                     <li>
                         <a href="/Landingpage/Aboutus">
                             <span class="label">About Us</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Landingpage/Contactus">
-                            <span class="label">Contact Us</span>
                         </a>
                     </li>
                 </ul>

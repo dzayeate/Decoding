@@ -128,11 +128,6 @@ $user =  Auth::user();
                             <span class="label">Roles</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="/Admin/Authentication/Permissions">
-                            <span class="label">Permissions</span>
-                        </a>
-                    </li>
                 </ul>
             </li>
         </ul>

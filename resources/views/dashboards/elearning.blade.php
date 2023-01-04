@@ -192,7 +192,6 @@
                                 </div>
                                 <div class="text-muted d-inline-block text-small align-text-top">(572)</div>
                             </div>
-                            <div>$ 27.50</div>
                         </div>
                         <div>
                             <a href="/Course/Detail" class="btn btn-icon btn-icon-start btn-primary mt-3 stretched-link">
@@ -387,12 +386,6 @@
                             </div>
                             <div class="text-muted d-inline-block text-small align-text-top">(39)</div>
                         </div>
-                        <div class="card-text mb-0">
-                            <div class="text-muted text-overline text-small">
-                                <del>$ 42.25</del>
-                            </div>
-                            <div>$ 27.50</div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -414,12 +407,6 @@
                                 </select>
                             </div>
                             <div class="text-muted d-inline-block text-small align-text-top">(221)</div>
-                        </div>
-                        <div class="card-text mb-0">
-                            <div class="text-muted text-overline text-small">
-                                <del>$ 36.50</del>
-                            </div>
-                            <div>$ 15.25</div>
                         </div>
                     </div>
                 </div>
@@ -444,12 +431,6 @@
                             </div>
                             <div class="text-muted d-inline-block text-small align-text-top">(572)</div>
                         </div>
-                        <div class="card-text mb-0">
-                            <div class="text-muted text-overline text-small">
-                                <del>$ 51.00</del>
-                            </div>
-                            <div>$ 36.80</div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -471,12 +452,6 @@
                                 </select>
                             </div>
                             <div class="text-muted d-inline-block text-small align-text-top">(25)</div>
-                        </div>
-                        <div class="card-text mb-0">
-                            <div class="text-muted text-overline text-small">
-                                <del>$ 18.25</del>
-                            </div>
-                            <div>$ 11.00</div>
                         </div>
                     </div>
                 </div>
@@ -501,10 +476,6 @@
                             <div class="text-muted d-inline-block text-small align-text-top">(472)</div>
                         </div>
                         <div class="card-text mb-0">
-                            <div class="text-muted text-overline text-small">
-                                <del>$ 24.00</del>
-                            </div>
-                            <div>$ 14.90</div>
                         </div>
                     </div>
                 </div>
