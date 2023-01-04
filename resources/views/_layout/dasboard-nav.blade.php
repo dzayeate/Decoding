@@ -85,7 +85,7 @@ $user =  Auth::user();
     <div class="menu-container flex-grow-1">
         <ul id="menu" class="menu">
             <li>
-                <a href="/Dashboards/">
+                <a href="/Dashboards/Elearning">
                     <i data-acorn-icon="home-garage" class="icon" data-acorn-size="18"></i>
                     <span class="label">Dashboards</span>
                 </a>
@@ -107,47 +107,6 @@ $user =  Auth::user();
                     </li>
                     <li>
                         <a href="/Course/Detail">
-                            <span class="label">Detail</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#quiz">
-                    <i data-acorn-icon="quiz" class="icon" data-acorn-size="18"></i>
-                    <span class="label">Quiz</span>
-                </a>
-                <ul id="quiz">
-                    <li>
-                        <a href="/Course/Quiz/List">
-                            <span class="label">List</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Course/Quiz/Detail">
-                            <span class="label">Detail</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Course/Quiz/Result">
-                            <span class="label">Result</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#paths">
-                    <i data-acorn-icon="destination" class="icon" data-acorn-size="18"></i>
-                    <span class="label">Paths</span>
-                </a>
-                <ul id="paths">
-                    <li>
-                        <a href="/Path/List">
-                            <span class="label">List</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Path/Detail">
                             <span class="label">Detail</span>
                         </a>
                     </li>

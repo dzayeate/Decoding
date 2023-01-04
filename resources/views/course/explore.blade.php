@@ -105,12 +105,6 @@
                             </div>
                             <div class="text-muted d-inline-block text-small align-text-top">(53)</div>
                         </div>
-                        <div class="card-text mb-0">
-                            <div class="text-muted text-overline text-small">
-                                <del>$ 32.50</del>
-                            </div>
-                            <div>$ 24.80</div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -132,12 +126,6 @@
                                 </select>
                             </div>
                             <div class="text-muted d-inline-block text-small align-text-top">(67)</div>
-                        </div>
-                        <div class="card-text mb-0">
-                            <div class="text-muted text-overline text-small">
-                                <del>$ 27.00</del>
-                            </div>
-                            <div>$ 13.20</div>
                         </div>
                     </div>
                 </div>
@@ -161,12 +149,6 @@
                             </div>
                             <div class="text-muted d-inline-block text-small align-text-top">(427)</div>
                         </div>
-                        <div class="card-text mb-0">
-                            <div class="text-muted text-overline text-small">
-                                <del>$ 48.00</del>
-                            </div>
-                            <div>$ 28.80</div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -188,12 +170,6 @@
                                 </select>
                             </div>
                             <div class="text-muted d-inline-block text-small align-text-top">(84)</div>
-                        </div>
-                        <div class="card-text mb-0">
-                            <div class="text-muted text-overline text-small">
-                                <del>$ 32.25</del>
-                            </div>
-                            <div>$ 24.50</div>
                         </div>
                     </div>
                 </div>

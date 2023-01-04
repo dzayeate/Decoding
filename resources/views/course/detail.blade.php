@@ -35,16 +35,6 @@
                     </nav>
                 </div>
                 <!-- Title End -->
-
-                <!-- Top Buttons Start -->
-                <div class="col-12 col-sm-6 d-flex align-items-start justify-content-end">
-                    <!-- Start Now Start -->
-                    <a href="/Misc/Player" class="btn btn-primary btn-icon btn-icon-start w-100 w-sm-auto">
-                        <i data-acorn-icon="chevron-right"></i>
-                        <span>Start Now</span>
-                    </a>
-                    <!-- Start Now End -->
-                </div>
                 <!-- Top Buttons End -->
             </div>
         </div>
@@ -56,7 +46,6 @@
             <!-- Left Side Start -->
             <div class="col-12 col-xxl-8 mb-5">
                 <!-- Preview Start -->
-                <h2 class="small-title">Preview</h2>
                 <div class="card mb-5">
                     <div class="card-img-top player ">
                         <div class="plyr__video-embed sh-50 cover" id="player">
@@ -70,17 +59,6 @@
                     </div>
                     <div class="card-body">
                         <h6>Kali ini kita akan memulai seri baru untuk belajar Laravel 8.. Let's Go!</h6>
-                        <p class="mb-4">👾 Gabung Server Discord WPU 👾 <br>
-                            https://discord.gg/S4rrXQU
-                        </p>
-                        <h6>Laravel
-                        </h6>
-                            <p>https://laravel.com/</p>
-                        <h6> Laracast </h6>
-                        <p>http://laracast.com/</p>
-                        <h6>UNIVERSITAS PASUNDAN BANDUNG</h6>
-                        <p>http://www.unpas.ac.id/ <br>
-                            http://www.if.unpas.ac.id/</p>
                     </div>
                     <div class="card-footer border-0 pt-0">
                         <div class="row align-items-center">
